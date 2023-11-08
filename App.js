@@ -1,20 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,FlatList } from 'react-native';
 
 export default function App() {
+  const courses = [
+    {name:"Angular",id : 1},
+    {name:"React Js",id : 2},
+    {name:"Java",id : 3},
+    {name:"Python",id : 4},
+    {name:"Kotlin",id : 5},
+    {name:"React Native",id : 6},
+  
+  ]
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <FlatList data={courses}
+
+    // scroll indicator
+    
+    // horizontal 
+    // showsHorizontalScrollIndicator = {false}
+    
+    keyExtractor={(item) => item.id}
+    renderItem={({item}) => {
+      return <Text style={styles.content}> {item.name}</Text>
+    }}
+    />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+  content:{
+    fontSize:20,
+    backgroundColor : "yellow",
+    marginVertical : 10,
+    padding : 20
+  }
 });
