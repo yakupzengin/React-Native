@@ -9,13 +9,14 @@ export default function App() {
     {name:"Python",id : 4},
     {name:"Kotlin",id : 5},
     {name:"React Native",id : 6},
+    {name:"Swift",id : 7},
   
   ]
   return (
     <FlatList data={courses}
 
     // scroll indicator
-    
+
     // horizontal 
     // showsHorizontalScrollIndicator = {false}
     
