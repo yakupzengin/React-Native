@@ -1,38 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,FlatList } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './src/screen/HomeScreen';
+import CoursesScreen from './src/screen/CoursesScreen';
+import CoursesInformationScreen from './src/screen/CoursesInformationScreen';
+const  Stack = createNativeStackNavigator();
 
 export default function App() {
-  const courses = [
-    {name:"Angular",id : 1},
-    {name:"React Js",id : 2},
-    {name:"Java",id : 3},
-    {name:"Python",id : 4},
-    {name:"Kotlin",id : 5},
-    {name:"React Native",id : 6},
-    {name:"Swift",id : 7},
   
-  ]
   return (
-    <FlatList data={courses}
-
-    // scroll indicator
-
-    // horizontal 
-    // showsHorizontalScrollIndicator = {false}
-    
-    keyExtractor={(item) => item.id}
-    renderItem={({item}) => {
-      return <Text style={styles.content}> {item.name}</Text>
-    }}
-    />
-  );
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Anasayfa"
+          component={HomeScreen}        
+        />
+        <Stack.Screen
+          name="Kurslarım"
+          component={CoursesScreen}
+        />
+        <Stack.Screen
+          name="Kurs Bilgilerim"
+          component={CoursesInformationScreen}  
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  )
 }
 
 const styles = StyleSheet.create({
-  content:{
-    fontSize:20,
-    backgroundColor : "yellow",
-    marginVertical : 10,
-    padding : 20
-  }
+ 
 });
