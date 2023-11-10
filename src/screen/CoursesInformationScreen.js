@@ -17,6 +17,9 @@ export default function CoursesInformationScreen() {
       imageSource={require("../../assets/c.png")}
       desc = "Kapsamlı C Programlama Eğitimi" />
       
+      <Information title = "Java Programlama Eğitimi"
+      imageSource={require("../../assets/java.png")}
+      desc = "Kapsamlı Java Programlama Eğitimi" />
 
     </ScrollView>
   )
