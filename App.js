@@ -6,6 +6,7 @@ import HomeScreen from './src/screen/HomeScreen';
 import CoursesScreen from './src/screen/CoursesScreen';
 import CoursesInformationScreen from './src/screen/CoursesInformationScreen';
 import CounterScreen from './src/screen/CounterScreen';
+import BoxScreen from './src/screen/BoxScreen';
 const  Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -28,6 +29,10 @@ export default function App() {
         <Stack.Screen
           name="Sayaç"
           component={CounterScreen}  
+        />
+        <Stack.Screen
+          name="Kutu Uygulaması"
+          component={BoxScreen}  
         />
       </Stack.Navigator>
     </NavigationContainer>
