@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/screen/HomeScreen';
 import CoursesScreen from './src/screen/CoursesScreen';
 import CoursesInformationScreen from './src/screen/CoursesInformationScreen';
+import CounterScreen from './src/screen/CounterScreen';
 const  Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -23,6 +24,10 @@ export default function App() {
         <Stack.Screen
           name="Kurs Bilgilerim"
           component={CoursesInformationScreen}  
+        />
+        <Stack.Screen
+          name="Sayaç"
+          component={CounterScreen}  
         />
       </Stack.Navigator>
     </NavigationContainer>

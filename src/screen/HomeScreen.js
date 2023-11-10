@@ -4,8 +4,9 @@ import React from 'react'
 export default function HomeScreen({navigation}) {
     
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Ana Ekran</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+      <Text style={{marginVertical:20}}>Ana Ekran</Text>
+      
       <Button
         title="Kurslarım"
         onPress={() => navigation.navigate('Kurslarım')}
@@ -14,6 +15,11 @@ export default function HomeScreen({navigation}) {
         title="Kurs Bilgilerim"
         onPress={() => navigation.navigate('Kurs Bilgilerim')}
       />
+      <Button
+        title="Sayaç Uygulaması"
+        onPress={() => navigation.navigate('Sayaç')}
+      />
+      
     </View>
   )
 }
